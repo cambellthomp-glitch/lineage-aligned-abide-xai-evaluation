@@ -1,0 +1,23 @@
+domain,item,verified_specification
+input,FC full space,"19,900 lower-triangle edges; train-only F selector retains 4,975"
+input,Frequency,"200 regions × 15 non-DC bins = 3,000 node-major features; unavailable in selected folds 8–9"
+input,Demographics,Age and sex; train-partition mean-imputation safeguard and StandardScaler
+preprocessing,Fit scope,"Selector, scalers, frequency anchors, and demographic transform fit on applicable training partition only"
+FC encoder,Layers,"4,975→256→160 with normalization, nonlinear activation, and dropout"
+frequency encoder,Layers,Each regional 15-bin vector→80; seven-cluster variational pooling; deterministic posterior mean→160 at inference
+demographic encoder,Layers,2→32→160
+fusion,Structure,Attention gate over branch representations; weighted sum at width 160; four squeeze-and-excitation-style residual blocks
+classifier,Layers,160→64→1 logit; sigmoid gives ASD positive-class probability
+optimizer,Algorithm,AdamW
+optimizer,Learning rate,"0.0008; 60-epoch linear warm-up for non-compact models, followed by cosine annealing"
+loss,Recipe,Strict ablation recipe: weighted BCE + KL (0.002) + anchor MSE (0.30) + optional candidate-specific contrastive term
+training,Batch size,16 for retained multimodal / FC-plus-demographic candidates
+training,Seeds,"42, 43, 44; unweighted probability mean"
+evaluation,Nested design,10 shuffled stratified outer folds; 3 shuffled stratified inner folds
+selection,Level 1,Seed 42 successive halving: 12 candidates to 6 to 2; up to 80 then 160 epochs
+selection,Level 2,Two survivors × seeds 42/43/44; up to 300 epochs; minimum 120; patience 60
+selection,Criterion,"Mean three-seed inner-OOF AUC; within 0.005 use lower Brier, fewer parameters, lower ID"
+early stopping,Final epoch,"Per seed, median of three inner best epochs; final outer-train fit uses fixed epoch"
+calibration,Secondary Platt,Fit on outer-train inner-OOF probabilities and applied to outer test; primary raw probabilities retained
+checkpoint,Retained state,30/30 final checkpoint files load; maximum probability error 0
+unrecoverable,Upstream environment,"C-PAC version, complete C-PAC parameters, container, download manifest, and raw-image mapping unavailable"

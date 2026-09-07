@@ -1,0 +1,13 @@
+candidate_id,family,fc_count,use_frequency,use_demographics,frequency_pooling,contrastive_weight,regularization,dropout_sc_or_encoder,dropout_cls,weight_decay,residual_blocks,loss_recipe,ocread_eval_mode,trainable_parameters,level1_rung1_epoch,level1_max_epoch,level2_max_epoch
+C01,fc_only_compact,1000,false,false,none,0.0,base,0.25,0.25,0.005,2,compact_bce,not_applicable,438705,80,160,300
+C02,fc_only_compact,1000,false,false,none,0.0,strong,0.35,0.35,0.010,2,compact_bce,not_applicable,438705,80,160,300
+C03,fc_only_compact,2500,false,false,none,0.0,base,0.25,0.25,0.005,2,compact_bce,not_applicable,822705,80,160,300
+C04,fc_only_compact,2500,false,false,none,0.0,strong,0.35,0.35,0.010,2,compact_bce,not_applicable,822705,80,160,300
+C05,fc_only_compact,4975,false,false,none,0.0,base,0.25,0.25,0.005,2,compact_bce,not_applicable,1456305,80,160,300
+C06,fc_only_compact,4975,false,false,none,0.0,strong,0.35,0.35,0.010,2,compact_bce,not_applicable,1456305,80,160,300
+C07,fc_demographics,4975,false,true,none,0.1,base,0.25,0.25,0.005,4,strict_ablation_recipe,not_applicable,1612355,80,160,300
+C08,fc_demographics,4975,false,true,none,0.1,strong,0.35,0.35,0.010,4,strict_ablation_recipe,not_applicable,1612355,80,160,300
+C09,full_multimodal_no_contrastive,4975,true,true,ocread,0.0,base,0.25,0.25,0.005,4,strict_ablation_recipe,mu,1715381,80,160,300
+C10,full_multimodal_no_contrastive,4975,true,true,ocread,0.0,strong,0.35,0.35,0.010,4,strict_ablation_recipe,mu,1715381,80,160,300
+C11,current_full_multimodal,4975,true,true,ocread,0.1,base,0.25,0.25,0.005,4,strict_ablation_recipe,mu,1715381,80,160,300
+C12,current_full_multimodal,4975,true,true,ocread,0.1,strong,0.35,0.35,0.010,4,strict_ablation_recipe,mu,1715381,80,160,300

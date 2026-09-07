@@ -1,0 +1,5 @@
+# Aggregate source-data dictionary
+
+The `aggregate_source_data/` directory contains only author-generated, non-identifying aggregate or condition-level values licensed under Creative Commons Attribution 4.0 International (SPDX: CC-BY-4.0). `DATA_DICTIONARY.md` is covered by the same data license. Files include workflow nodes and edges with internal claim labels removed; feature-coordinate agreement summaries without participant rows; fold/seed-level sanity and repeated-removal summaries; fold/seed predictive metric summaries; and participant-flow counts without identifiers. Column names and units are preserved from the source tables wherever safe.
+
+`figure_s3_source_data.csv` is intentionally excluded because it contains 879 participant-level labels and probabilities even though it has no explicit subject-identifier column. The `supplementary_machine_readable/` directory contains author-generated aggregate tables and path-sanitized artifact/checkpoint provenance ledgers. Supplementary Table S8 is an artifact inventory, not participant data; hashes and logical artifact paths do not contain artifact bytes.

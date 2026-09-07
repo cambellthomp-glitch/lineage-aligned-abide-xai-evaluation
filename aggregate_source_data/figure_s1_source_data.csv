@@ -1,0 +1,28 @@
+flow_stage,n,interpretation,record_type,site,ASD,Control,total
+phenotype_snapshot,1112.0,Unique phenotype records,flow,,,,
+excluded_no_filename,77.0,Verifiable source label is FILE_ID=no_filename; age-range exclusion is not supported,flow,,,,
+named_records,1035.0,1112 minus no_filename,flow,,,,
+named_without_local_cc200,155.0,Individual reasons unavailable; not imaging-QC failures,flow,,,,
+local_cc200_unique_matches,880.0,Local availability only; not imaging-QC passage,flow,,,,
+excluded_structural_width_error,1.0,one retained local CC200 file row 130 has 44 rather than 200 columns,flow,,,,
+canonical_analysis_cohort,879.0,Phenotype/time-series/features/splits/predictions aligned,flow,,,,
+,,,site_dx,CALTECH,19.0,18.0,37.0
+,,,site_dx,CMU,3.0,2.0,5.0
+,,,site_dx,KKI,12.0,27.0,39.0
+,,,site_dx,LEUVEN_1,14.0,15.0,29.0
+,,,site_dx,LEUVEN_2,13.0,19.0,32.0
+,,,site_dx,MAX_MUN,18.0,24.0,42.0
+,,,site_dx,NYU,71.0,98.0,169.0
+,,,site_dx,OHSU,12.0,11.0,23.0
+,,,site_dx,OLIN,14.0,11.0,25.0
+,,,site_dx,PITT,22.0,23.0,45.0
+,,,site_dx,SBL,14.0,11.0,25.0
+,,,site_dx,SDSU,12.0,21.0,33.0
+,,,site_dx,STANFORD,17.0,19.0,36.0
+,,,site_dx,TRINITY,21.0,23.0,44.0
+,,,site_dx,UCLA_1,27.0,27.0,54.0
+,,,site_dx,UCLA_2,8.0,12.0,20.0
+,,,site_dx,UM_1,35.0,46.0,81.0
+,,,site_dx,UM_2,12.0,19.0,31.0
+,,,site_dx,USM,38.0,23.0,61.0
+,,,site_dx,YALE,22.0,26.0,48.0

@@ -1,0 +1,21 @@
+panel,order,stage,display_text,source_file,source_field,item_type
+A,1,Input provenance,ABIDE-I,protocol_manifest.json,scope.dataset,fact
+A,2,Input provenance,n=879,protocol_manifest.json,scope.cohort_size,fact
+A,3,Input provenance,C-PAC-derived data,protocol_manifest.json,scope.pipeline,fact
+A,4,Input provenance,CC200,protocol_manifest.json,scope.atlas,fact
+A,5,Input provenance,"FC: 19,900 edges",oof_subject_signed_attributions.npz,*_fc_full_signed.shape[1],fact
+A,6,Input provenance,"Corrected node-major frequency: 3,000",protocol_manifest.json,scope.frequency_layout + phase1_gate.frequency_shape_879_3000,fact
+B,1,Nested prediction,10 outer folds,protocol_manifest.json,nested_design.outer_folds,fact
+B,2,Nested prediction,Seeds 42 / 43 / 44,protocol_manifest.json,nested_design.final_base_seeds,fact
+B,3,Nested prediction,30 checkpoints,protocol_manifest.json,canonical_training.checkpoint_count,fact
+B,4,Nested prediction,OOF 879/879; assignment min=max=1,metrics.json,cohort_size + oof_assignment_min/max,fact
+B,5,Nested prediction,Equal-weight mean of three seed probabilities,metrics.json,primary_canonical_probability,fact
+C,1,Held-out XAI lineage,Subject ID → unseen outer model,xai_lineage_audit.json,checks.oof_assignment_exactly_once + provenance[].partition,fact
+C,2,Held-out XAI lineage,Checkpoint hash → prediction-linked explanation,xai_lineage_audit.json,provenance[].checkpoint_sha256 + prediction_max_abs_error_vs_saved,fact
+C,3,Held-out XAI lineage,G×I / IG,xai_lineage_audit.json,methods,fact
+C,4,Held-out XAI lineage,Subject / seed / fold / ensemble aggregation,final_acceptance_audit.json,checks.subject_seed_fold_ensemble_xai_levels_complete,fact
+D,1,Validation layers,Agreement: do methods rank similarly?,sanity_summary.json,gradient_x_input_vs_integrated_gradients,question
+D,2,Validation layers,Randomization sanity: dependence on learned structure?,sanity_summary.json,weight_randomization + label_randomization,question
+D,3,Validation layers,Repeated ROAR: greater retraining damage than random?,repeated_roar_summary.json,comparisons,question
+D,4,Validation layers,Engineering and lineage checks: PASS,final_acceptance_audit.json,status + meaning_of_pass,engineering_outcome
+D,5,Validation layers,Pre-specified ROAR support: not obtained,repeated_roar_summary.json,comparisons[].supports_roar_fidelity,roar_outcome

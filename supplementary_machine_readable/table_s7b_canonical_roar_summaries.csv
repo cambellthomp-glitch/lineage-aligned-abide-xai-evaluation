@@ -1,0 +1,5 @@
+method,removal_fraction,n_folds,seeds_per_fold,n_paired_runs,mean_auc_attribution_minus_random,fold_bootstrap_95_ci,exact_two_sided_signflip_p,supports_roar_fidelity,predeclared_positive_direction
+gradient_x_input,0.05,10,3,30,0.0111575545609,"[0.00026542228853140273, 0.02237854429741108]",0.095703125,False,negative attribution-minus-random AUC
+integrated_gradients,0.05,10,3,30,0.00815935283688,"[-0.003826635070705745, 0.018696451513218543]",0.2109375,False,negative attribution-minus-random AUC
+gradient_x_input,0.1,10,3,30,0.00293607291126,"[-0.010120221865450045, 0.015645620035821307]",0.68359375,False,negative attribution-minus-random AUC
+integrated_gradients,0.1,10,3,30,0.00870469173442,"[-0.007524662778210235, 0.02483361149851522]",0.330078125,False,negative attribution-minus-random AUC

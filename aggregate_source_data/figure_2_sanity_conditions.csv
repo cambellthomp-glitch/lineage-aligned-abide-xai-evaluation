@@ -1,0 +1,61 @@
+condition,fold,seed,checkpoint_sha256,spearman,scope
+Weight randomization,0,42,c6b82995af9e828ff6bdcf73a17a1da16df300e4de894f92fc56f2bc5a18257d,0.0496114236661803,FC G×I; all trainable weights reinitialized
+Weight randomization,0,43,1b82785b4cb27ade1ed8ff25690130802021acc701c66fe1824d196b70486309,0.0605492333340239,FC G×I; all trainable weights reinitialized
+Weight randomization,0,44,b9fa444085688702a2470868c86b3ea3d6927308f4244a07682f43de28d24159,0.0770393525854227,FC G×I; all trainable weights reinitialized
+Weight randomization,1,42,f254d9bde3e82aa227bcd381b19074c429f800392b01aa46243458a459bccd90,0.0480563855703295,FC G×I; all trainable weights reinitialized
+Weight randomization,1,43,daad350e4ba72bd902ce5da989a6d00c62555e7175a29b181ff5a58435d34c27,0.0795074498234426,FC G×I; all trainable weights reinitialized
+Weight randomization,1,44,8c2a0d5f1f4607863eb064965f614b519eb6b5831056f833907e035d762678d6,0.0443302745736408,FC G×I; all trainable weights reinitialized
+Weight randomization,2,42,ee55b4f6686c12d9acd4a9facb2dd6bd53b1a8e87fa32b4a0ee5aa4f79e10666,0.0383270555727216,FC G×I; all trainable weights reinitialized
+Weight randomization,2,43,331138cd4ebf1dd0d758f395a4d9fa9d34d7b88b5e1f727147e49ac23074bc59,0.0784220047366407,FC G×I; all trainable weights reinitialized
+Weight randomization,2,44,fe1f50f30d3f91caa6a9a5bbf94c4794c58e05682f7a0888530de5bfbf1d9564,0.0419836542059297,FC G×I; all trainable weights reinitialized
+Weight randomization,3,42,0bbef3023ee595aa4e47c85a42754981e9d5c563d8b29c30a1f47ce9f9f0ceea,0.0684854895377597,FC G×I; all trainable weights reinitialized
+Weight randomization,3,43,4d0c17f03c1cb9cf9e573a4fddba5a2955861919d3a6b1b36e557fc08f7f02a9,0.0644531827585559,FC G×I; all trainable weights reinitialized
+Weight randomization,3,44,1672b06ce28aa1081c6a66bc9469acb25a20a19c2fd27d9beaf880159efe192a,0.0561243836269303,FC G×I; all trainable weights reinitialized
+Weight randomization,4,42,38af9e7df5b4a50832232b05c7d319917f44ccf22323adfc1a805c5f8a613ac7,0.0920129630695493,FC G×I; all trainable weights reinitialized
+Weight randomization,4,43,13d17e27e11dcf9bacb6c0363a26e5cd7cc95faece4f5ff7c4b13c410724a9d5,0.0405999394105728,FC G×I; all trainable weights reinitialized
+Weight randomization,4,44,9dacea0ba8f28d0aca4b07baea756fbb1262c2e52819ffb6550ea176510956ea,0.0289582192181453,FC G×I; all trainable weights reinitialized
+Weight randomization,5,42,50a49aa4878b83e2a09c31a7ab4b90f4ea2bc056e2701eec5351644622e25085,0.0315993821461088,FC G×I; all trainable weights reinitialized
+Weight randomization,5,43,a0932561636770b05e3880c8befe5e5096d9acacf8496525571c03727c86139b,0.0478709789215413,FC G×I; all trainable weights reinitialized
+Weight randomization,5,44,1f272d0d421037bde3ba1f9f6267539e94659da209548fc70ac47d1587f2db7b,0.0657585523021185,FC G×I; all trainable weights reinitialized
+Weight randomization,6,42,5c5df0dda5e48fdf8614837f053f4302a0230168508b4ec16bb6aacb1442167d,0.025400406630954,FC G×I; all trainable weights reinitialized
+Weight randomization,6,43,a24422c4220653ce48f2c36e6a4380ad38e49faf07605b9c7c95f8809a498d1f,0.0303896412194126,FC G×I; all trainable weights reinitialized
+Weight randomization,6,44,6a6a4e5a7e6995feb81b6a05659334da76f0c4332c7ba7a0cba1395393cd17fb,0.0580841337971882,FC G×I; all trainable weights reinitialized
+Weight randomization,7,42,76a12eebc52f94e8773d2b74e159f71bb335825bdda105c59175de51405db129,0.114763633697989,FC G×I; all trainable weights reinitialized
+Weight randomization,7,43,15c346b625fc4d27a3dc0ad2dd6f77136c46e08a7fe0691c50112a242def355d,0.0497569521183115,FC G×I; all trainable weights reinitialized
+Weight randomization,7,44,22554bbe39b3eb4024c43911261752b25ae95524a435aa753e54e48192f8086f,0.0480658719886868,FC G×I; all trainable weights reinitialized
+Weight randomization,8,42,7d522cbb688f8d3e77153d2194ac0ce4dde013cc2b79bb1364f64d20c14badbf,0.0533957634490996,FC G×I; all trainable weights reinitialized
+Weight randomization,8,43,2e0f775e8fc79bae1890ad3025f20deb84984aaec3abfc2ace41fee7c013985f,0.0667677674850423,FC G×I; all trainable weights reinitialized
+Weight randomization,8,44,f38c58669fd8eae6a215b9ce9eb81d3584ef64457bbe34ec6a069ea0fd5a2bf5,0.0497137093041842,FC G×I; all trainable weights reinitialized
+Weight randomization,9,42,53eb3779a25b52782c7394b4a7a8d18ebd8931efeca82a5d73f2b5fd48686aec,0.0434028783115949,FC G×I; all trainable weights reinitialized
+Weight randomization,9,43,8dda122b3e25ac6c5c81fd836f70b51ba072e83e89890f44a1e6fb09d5669b57,0.0133124245299977,FC G×I; all trainable weights reinitialized
+Weight randomization,9,44,e7acd985abfed2ebdab09574e60423bb27d1b653f520d56ac28c8fbbf11e79b8,0.0159594261534537,FC G×I; all trainable weights reinitialized
+Label randomization,0,42,c6b82995af9e828ff6bdcf73a17a1da16df300e4de894f92fc56f2bc5a18257d,0.0230063345830966,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,0,43,1b82785b4cb27ade1ed8ff25690130802021acc701c66fe1824d196b70486309,0.0299048311735818,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,0,44,b9fa444085688702a2470868c86b3ea3d6927308f4244a07682f43de28d24159,-0.0064607129332543,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,1,42,f254d9bde3e82aa227bcd381b19074c429f800392b01aa46243458a459bccd90,0.0310719800874677,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,1,43,daad350e4ba72bd902ce5da989a6d00c62555e7175a29b181ff5a58435d34c27,0.0461054803727464,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,1,44,8c2a0d5f1f4607863eb064965f614b519eb6b5831056f833907e035d762678d6,0.0368600973636972,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,2,42,ee55b4f6686c12d9acd4a9facb2dd6bd53b1a8e87fa32b4a0ee5aa4f79e10666,0.0246363237845505,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,2,43,331138cd4ebf1dd0d758f395a4d9fa9d34d7b88b5e1f727147e49ac23074bc59,0.0044734153899133,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,2,44,fe1f50f30d3f91caa6a9a5bbf94c4794c58e05682f7a0888530de5bfbf1d9564,0.0486587809323829,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,3,42,0bbef3023ee595aa4e47c85a42754981e9d5c563d8b29c30a1f47ce9f9f0ceea,0.0485896923011763,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,3,43,4d0c17f03c1cb9cf9e573a4fddba5a2955861919d3a6b1b36e557fc08f7f02a9,0.0289646878596863,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,3,44,1672b06ce28aa1081c6a66bc9469acb25a20a19c2fd27d9beaf880159efe192a,0.0251943685668928,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,4,42,38af9e7df5b4a50832232b05c7d319917f44ccf22323adfc1a805c5f8a613ac7,0.277564740161581,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,4,43,13d17e27e11dcf9bacb6c0363a26e5cd7cc95faece4f5ff7c4b13c410724a9d5,0.0084871883650368,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,4,44,9dacea0ba8f28d0aca4b07baea756fbb1262c2e52819ffb6550ea176510956ea,0.0436742258178437,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,5,42,50a49aa4878b83e2a09c31a7ab4b90f4ea2bc056e2701eec5351644622e25085,0.0406099676760882,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,5,43,a0932561636770b05e3880c8befe5e5096d9acacf8496525571c03727c86139b,0.0579180054075956,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,5,44,1f272d0d421037bde3ba1f9f6267539e94659da209548fc70ac47d1587f2db7b,0.0340419112149907,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,6,42,5c5df0dda5e48fdf8614837f053f4302a0230168508b4ec16bb6aacb1442167d,0.0454060500275786,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,6,43,a24422c4220653ce48f2c36e6a4380ad38e49faf07605b9c7c95f8809a498d1f,0.0109400837691808,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,6,44,6a6a4e5a7e6995feb81b6a05659334da76f0c4332c7ba7a0cba1395393cd17fb,0.0367621426047774,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,7,42,76a12eebc52f94e8773d2b74e159f71bb335825bdda105c59175de51405db129,0.271904450477226,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,7,43,15c346b625fc4d27a3dc0ad2dd6f77136c46e08a7fe0691c50112a242def355d,0.0455946950902273,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,7,44,22554bbe39b3eb4024c43911261752b25ae95524a435aa753e54e48192f8086f,0.0510860455041294,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,8,42,7d522cbb688f8d3e77153d2194ac0ce4dde013cc2b79bb1364f64d20c14badbf,0.0246682991014244,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,8,43,2e0f775e8fc79bae1890ad3025f20deb84984aaec3abfc2ace41fee7c013985f,0.0354262483549432,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,8,44,f38c58669fd8eae6a215b9ce9eb81d3584ef64457bbe34ec6a069ea0fd5a2bf5,0.0465052614431054,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,9,42,53eb3779a25b52782c7394b4a7a8d18ebd8931efeca82a5d73f2b5fd48686aec,0.0347980458652569,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,9,43,8dda122b3e25ac6c5c81fd836f70b51ba072e83e89890f44a1e6fb09d5669b57,0.0402368222917324,FC G×I; fixed selector/preprocessing; coordinate-matched
+Label randomization,9,44,e7acd985abfed2ebdab09574e60423bb27d1b653f520d56ac28c8fbbf11e79b8,0.0577223507333384,FC G×I; fixed selector/preprocessing; coordinate-matched

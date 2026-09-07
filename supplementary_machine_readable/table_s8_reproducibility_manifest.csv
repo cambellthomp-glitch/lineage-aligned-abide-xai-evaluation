@@ -1,0 +1,8 @@
+component,count,canonical_anchor,verified_status
+critical deliverables,65,deliverable_hashes.json,65-item key-deliverable ledger
+final checkpoints,30,checkpoint_reload_audit.json,30/30 reload; maximum probability error 0
+formal artifact manifest,3694,artifact_sha256_manifest.json,"Complete 3,694-entry ledger copied as CSV and JSON"
+OOF coverage,879,metrics.json / oof_predictions.npz,879/879; assignment min=max=1
+XAI lineage,30,xai/xai_lineage_audit.json,30 model-linked XAI records; subject/seed/fold/ensemble
+automated tests,32,test_report.json,32/32 PASS
+acceptance audit,22,final_acceptance_audit.json,22/22 PASS

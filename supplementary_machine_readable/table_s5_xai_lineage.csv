@@ -1,0 +1,14 @@
+domain,item,value,interpretation
+coverage,participants,879,All analyzed participants
+coverage,OOF assignment min,1,Each participant exactly once
+coverage,OOF assignment max,1,Each participant exactly once
+lineage,levels,subject; seed; fold; ensemble,Checkpoint→prediction→XAI linked
+FC,selected/full coordinates,"4,975 / 19,900",Selector-defined zero back-fill
+frequency,layout,"3,000 node-major",200 regions × 15 bins
+frequency,branch-absent folds,8; 9,FC-plus-demographic selected
+frequency,all-zero subject rows,175,88 + 87 held-out subjects in folds 8 and 9
+frequency,nonzero-contributing subjects,704,Folds 0–7
+aggregation,seed,signed arithmetic mean,Seeds 42/43/44
+aggregation,subject,mean absolute attribution,After signed seed averaging
+ranking,tie handling,stable mergesort; sequential ranks,Not average ties
+target,explained output,ASD positive-class probability,No biological or diagnostic-feature interpretation

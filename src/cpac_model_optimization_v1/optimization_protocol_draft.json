@@ -1,0 +1,492 @@
+{
+  "candidate_count": 12,
+  "candidate_ranking_rule": {
+    "auc_indifference_width": 0.005,
+    "boundary": "strictly_less_than",
+    "brier_tie_tolerance": 1e-12,
+    "deterministic_total_order": [
+      "From the remaining candidates, find the maximum eligible inner OOF AUC.",
+      "Create an AUC-indifference tier containing every remaining candidate for which maximum_AUC minus candidate_AUC is strictly less than 0.005. A difference exactly equal to 0.005 is not a tie.",
+      "Order that tier by lower inner OOF Brier, then fewer trainable parameters, then lexicographically smaller candidate_id.",
+      "Append the ordered tier to the ranking, remove it, and repeat until no candidates remain."
+    ],
+    "outer_test_metrics_used": false,
+    "parameter_definition": "total trainable scalar parameters in the instantiated candidate",
+    "top_n_rule": "Take the first N candidates from this deterministic total order."
+  },
+  "candidate_space_design": {
+    "forbidden_post_confirmation_expansion": "No candidate may be added, removed, split, merged, or redefined after protocol confirmation unless the entire optimization protocol is versioned anew before any outer-test prediction is generated.",
+    "not_a_full_factorial": true,
+    "rationale": [
+      "FC count is isolated in the lower-cost FC-only compact family using 1000, 2500, and 4975 edges under both regularization levels.",
+      "At the current 4975-edge setting, FC plus demographics, full multimodal without contrastive loss, and the current full multimodal model are each evaluated under both regularization levels.",
+      "The no-contrastive and current-full candidates are paired at identical FC count, architecture, and regularization so that contrastive loss is not confounded by those settings.",
+      "Stochastic OCREAD inference is excluded rather than crossed with the model grid; all OCREAD validation and final prediction uses the deterministic posterior mean."
+    ],
+    "type": "limited_partial_factorial"
+  },
+  "candidates": [
+    {
+      "candidate_id": "C01",
+      "contrastive_weight": 0.0,
+      "family": "fc_only_compact",
+      "fc_count": 1000,
+      "frequency_pooling": "none",
+      "ocread_eval_mode": "not_applicable",
+      "regularization": "base",
+      "residual_blocks": 2,
+      "trainable_parameters": 438705,
+      "use_demographics": false,
+      "use_frequency": false
+    },
+    {
+      "candidate_id": "C02",
+      "contrastive_weight": 0.0,
+      "family": "fc_only_compact",
+      "fc_count": 1000,
+      "frequency_pooling": "none",
+      "ocread_eval_mode": "not_applicable",
+      "regularization": "strong",
+      "residual_blocks": 2,
+      "trainable_parameters": 438705,
+      "use_demographics": false,
+      "use_frequency": false
+    },
+    {
+      "candidate_id": "C03",
+      "contrastive_weight": 0.0,
+      "family": "fc_only_compact",
+      "fc_count": 2500,
+      "frequency_pooling": "none",
+      "ocread_eval_mode": "not_applicable",
+      "regularization": "base",
+      "residual_blocks": 2,
+      "trainable_parameters": 822705,
+      "use_demographics": false,
+      "use_frequency": false
+    },
+    {
+      "candidate_id": "C04",
+      "contrastive_weight": 0.0,
+      "family": "fc_only_compact",
+      "fc_count": 2500,
+      "frequency_pooling": "none",
+      "ocread_eval_mode": "not_applicable",
+      "regularization": "strong",
+      "residual_blocks": 2,
+      "trainable_parameters": 822705,
+      "use_demographics": false,
+      "use_frequency": false
+    },
+    {
+      "candidate_id": "C05",
+      "contrastive_weight": 0.0,
+      "family": "fc_only_compact",
+      "fc_count": 4975,
+      "frequency_pooling": "none",
+      "ocread_eval_mode": "not_applicable",
+      "regularization": "base",
+      "residual_blocks": 2,
+      "trainable_parameters": 1456305,
+      "use_demographics": false,
+      "use_frequency": false
+    },
+    {
+      "candidate_id": "C06",
+      "contrastive_weight": 0.0,
+      "family": "fc_only_compact",
+      "fc_count": 4975,
+      "frequency_pooling": "none",
+      "ocread_eval_mode": "not_applicable",
+      "regularization": "strong",
+      "residual_blocks": 2,
+      "trainable_parameters": 1456305,
+      "use_demographics": false,
+      "use_frequency": false
+    },
+    {
+      "candidate_id": "C07",
+      "contrastive_weight": 0.1,
+      "family": "fc_demographics",
+      "fc_count": 4975,
+      "frequency_pooling": "none",
+      "ocread_eval_mode": "not_applicable",
+      "regularization": "base",
+      "residual_blocks": 4,
+      "trainable_parameters": 1612355,
+      "use_demographics": true,
+      "use_frequency": false
+    },
+    {
+      "candidate_id": "C08",
+      "contrastive_weight": 0.1,
+      "family": "fc_demographics",
+      "fc_count": 4975,
+      "frequency_pooling": "none",
+      "ocread_eval_mode": "not_applicable",
+      "regularization": "strong",
+      "residual_blocks": 4,
+      "trainable_parameters": 1612355,
+      "use_demographics": true,
+      "use_frequency": false
+    },
+    {
+      "candidate_id": "C09",
+      "contrastive_weight": 0.0,
+      "family": "full_multimodal_no_contrastive",
+      "fc_count": 4975,
+      "frequency_pooling": "ocread",
+      "ocread_eval_mode": "mu",
+      "regularization": "base",
+      "residual_blocks": 4,
+      "trainable_parameters": 1715381,
+      "use_demographics": true,
+      "use_frequency": true
+    },
+    {
+      "candidate_id": "C10",
+      "contrastive_weight": 0.0,
+      "family": "full_multimodal_no_contrastive",
+      "fc_count": 4975,
+      "frequency_pooling": "ocread",
+      "ocread_eval_mode": "mu",
+      "regularization": "strong",
+      "residual_blocks": 4,
+      "trainable_parameters": 1715381,
+      "use_demographics": true,
+      "use_frequency": true
+    },
+    {
+      "candidate_id": "C11",
+      "contrastive_weight": 0.1,
+      "family": "current_full_multimodal",
+      "fc_count": 4975,
+      "frequency_pooling": "ocread",
+      "ocread_eval_mode": "mu",
+      "regularization": "base",
+      "residual_blocks": 4,
+      "trainable_parameters": 1715381,
+      "use_demographics": true,
+      "use_frequency": true
+    },
+    {
+      "candidate_id": "C12",
+      "contrastive_weight": 0.1,
+      "family": "current_full_multimodal",
+      "fc_count": 4975,
+      "frequency_pooling": "ocread",
+      "ocread_eval_mode": "mu",
+      "regularization": "strong",
+      "residual_blocks": 4,
+      "trainable_parameters": 1715381,
+      "use_demographics": true,
+      "use_frequency": true
+    }
+  ],
+  "checkpoint_selection": {
+    "auc_0_005_rule_applies_to_checkpoints": false,
+    "evaluation_interval_epochs": 5,
+    "patience_improvement_definition": "The last-improved epoch changes only when the checkpoint comparator above selects the current evaluation checkpoint.",
+    "within_one_inner_training_run": "Select the checkpoint with the highest validation AUC; exact numerical AUC ties within 1e-12 use lower validation Brier; remaining ties use the earlier epoch."
+  },
+  "code_reuse_and_required_changes": {
+    "future_new_runner": "repository_root\\cpac_model_optimization_v1.py",
+    "required_future_implementation": [
+      "Add an immutable OptimizationCandidate registry matching the 12 rows and verify its SHA-256 before every fold.",
+      "Generalize model factories to accept candidate.fc_count; do not edit the protected frozen code or checkpoint files.",
+      "Generalize fit-partition preprocessing to compute one fit-only F-score ranking and produce independently scaled top-1000, top-2500, and top-4975 views.",
+      "Change the strict ablation model factory in the new runner to accept space_dim instead of the current hard-coded 4975.",
+      "Implement resumable level-1 epoch-80 to epoch-160 successive halving with serialized model, optimizer, scheduler, RNG, best-checkpoint, and patience state.",
+      "Implement concatenated inner OOF AUC/Brier aggregation and the deterministic AUC-tier ranking rule exactly as declared.",
+      "Implement fresh level-2 three-seed training and seed-specific median epoch extraction.",
+      "Implement one-selected-configuration outer training with three required seed fits and equal-weight probability averaging.",
+      "Add canonical-path guards for the protected baseline and deny reads of frozen OOF or outer-result artifacts.",
+      "Freeze a protocol manifest before training, log every elimination with only inner metrics, and keep outer prediction generation separate from any later outer metric calculation."
+    ],
+    "required_tests_before_training": [
+      "Candidate registry has exactly 12 unique IDs and matches the CSV table.",
+      "F-score top-1000 is a prefix of top-2500 and top-2500 is a prefix of top-4975 within each fit partition.",
+      "No scaler, imputer, anchor, or F-score state is shared across fit partitions.",
+      "Permuting outer-test labels leaves all inner selection artifacts and selected candidate IDs bitwise unchanged.",
+      "The selector API accepts no outer-test labels, predictions, AUC, Brier, accuracy, or metrics.",
+      "AUC differences below 0.005 invoke Brier then parameter tie-breaking; a difference exactly 0.005 does not.",
+      "Rung-1 survivors are exactly six when at least six candidates are valid; rung-2 survivors are exactly two when at least two are valid.",
+      "Level-2 uses exactly seeds 42, 43, and 44 and never selects or drops a valid seed.",
+      "OCREAD evaluation mode is mu for all validation and outer predictions.",
+      "Outer final probabilities equal the arithmetic mean of the three selected-candidate seed vectors.",
+      "No configuration-level outer OOF fusion is implemented.",
+      "The protected baseline path cannot be selected as an input-results source or output destination."
+    ],
+    "reuse_without_modifying_frozen_baseline": [
+      {
+        "items": [
+          "FeatureBundle and LabelFirewall",
+          "outer and inner split generation",
+          "DemoTransformer",
+          "F-test FC ranking logic",
+          "frequency scaling and Yeo-7 anchor construction",
+          "safe AUC and frozen-prediction safeguards"
+        ],
+        "source": "cpac_leakage_free_nested_cv.py"
+      },
+      {
+        "items": [
+          "VB_OCREAD",
+          "SE_ResidualBlock",
+          "deterministic eval_ocread_mode=mu behavior"
+        ],
+        "source": "cpac_leakage_free_model.py"
+      },
+      {
+        "items": [
+          "FCCompactDeep architecture",
+          "base and regularized compact-FC settings",
+          "compact-FC prediction logic"
+        ],
+        "source": "cpac_strict_same_protocol_baselines.py"
+      },
+      {
+        "items": [
+          "StrictAblationModel branch logic",
+          "FC plus demographics variant",
+          "full and no-contrastive variants",
+          "legacy contrastive loss",
+          "AUC/Brier checkpoint monitoring pattern"
+        ],
+        "source": "cpac_strict_multimodal_ablation.py"
+      },
+      {
+        "items": [
+          "resource monitoring pattern",
+          "leakage-invariance test pattern"
+        ],
+        "source": "run_cpac_leakage_free_smoke.py"
+      }
+    ]
+  },
+  "compute_estimate": {
+    "benchmark_hardware": {
+      "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+      "gpu_memory_gb": 7.9595,
+      "pytorch": "2.11.0+cu128",
+      "system_ram_gb": 31.1854
+    },
+    "benchmark_source": "repository_root\\cpac_model_complexity_benchmark\\run_20260717_full\\complexity_summary_table.csv",
+    "estimate_limitations": [
+      "The measured per-epoch references are outer-training fits; inner rates are scaled estimates because inner-fit partitions are smaller.",
+      "FC counts 1000 and 2500 and the FC-plus-demographics family were not directly timed in the existing complexity benchmark.",
+      "Wall time depends on Windows process overhead, preprocessing-cache implementation, concurrent activity, and the actual early-stopping epochs."
+    ],
+    "estimated_inner_seconds_per_epoch_ranges": {
+      "fc_compact_1000": [
+        0.1,
+        0.14
+      ],
+      "fc_compact_2500": [
+        0.12,
+        0.16
+      ],
+      "fc_compact_4975": [
+        0.15,
+        0.19
+      ],
+      "fc_demographics_4975": [
+        0.2,
+        0.3
+      ],
+      "full_multimodal_4975": [
+        0.6,
+        0.72
+      ]
+    },
+    "measured_outer_train_reference": {
+      "fc_compact_4975_peak_gpu_mb": 46.2793,
+      "fc_compact_4975_seconds_per_epoch": 0.2345351361,
+      "full_multimodal_4975_peak_gpu_mb": 51.2656,
+      "full_multimodal_4975_seconds_per_epoch": 0.9630312532
+    },
+    "serial_single_gpu_planning": {
+      "conservative_max_budget": "approximately 20-24 serial GPU-hours if the expensive full models dominate and early stopping provides little saving",
+      "level_1_rung_1_all_10_outer_folds": "approximately 2.5-3.5 GPU-hours",
+      "level_1_rung_2_all_10_outer_folds": "approximately 1.3-2.7 additional GPU-hours, depending on survivor families and early stopping",
+      "level_2_all_10_outer_folds": "approximately 2-6 GPU-hours expected; about 10 GPU-hours at the all-full-model 300-epoch ceiling",
+      "outer_final_three_seed_fits_all_10_outer_folds": "approximately 0.5-2.5 GPU-hours, depending on selected family and seed-specific median epochs",
+      "total_expected": "approximately 8-14 serial GPU-hours including evaluation and preprocessing overhead"
+    },
+    "storage_estimate": "Approximately 5-12 GB if all rung checkpoints, optimizer states, histories, and inner OOF vectors are retained; lower if only resumable rung states and best checkpoints are kept."
+  },
+  "created_local_date": "2026-07-17",
+  "data_and_split_policy": {
+    "fc_selection": {
+      "counts": [
+        1000,
+        2500,
+        4975
+      ],
+      "method": "training-partition-only univariate F-test with stable descending sort",
+      "nested_prefix_rule": "Within a given fit partition, compute the 19900-edge F-score ranking once and use the first K indices for K in {1000,2500,4975}; fit a separate StandardScaler for each K on that same fit partition only.",
+      "no_cross_partition_cache": true,
+      "universe": 19900
+    },
+    "frequency_scaling_anchors_and_demographics": "Every scaler, demographic imputer, and frequency anchor set is fit only on the relevant inner-fit partition and is refit on the complete outer-training partition after candidate selection.",
+    "inner_folds_per_outer_fold": 3,
+    "inner_splitter": "StratifiedKFold(shuffle=true, random_state=42 + 10000 + outer_fold)",
+    "optimization_scope": "Candidates are selected independently inside each outer fold using only that outer fold's training participants and its three inner validation partitions.",
+    "outer_folds": 10,
+    "outer_splitter": "StratifiedKFold(shuffle=true, random_state=42)",
+    "outer_test_access": "Outer-test labels and outer-test performance are unavailable to preprocessing, training, checkpointing, candidate ranking, halving, epoch selection, seed handling, retries, and stopping."
+  },
+  "explicit_prohibitions": [
+    "Do not train or evaluate any model before the user confirms this candidate space and a frozen implementation manifest is created.",
+    "Do not read frozen OOF predictions or detailed outer-test results from the protected baseline.",
+    "Do not use outer-test performance in model, epoch, regularization, FC-count, OCREAD-mode, seed, retry, halving, or stopping decisions.",
+    "Do not select a best random seed.",
+    "Do not fuse outer OOF predictions from different candidate configurations.",
+    "Do not use 80% or any other absolute performance target.",
+    "Do not add post hoc candidates after seeing any inner or outer performance."
+  ],
+  "failure_and_elimination_rules": {
+    "infrastructure_interruption": "An interrupted trial may be resumed from its exact serialized state or rerun with identical configuration, partition, base seed, and schedule. No performance information may inform the choice.",
+    "level_1_validity": "If fewer than six candidates are valid at rung 1, advance all valid candidates. If fewer than two are valid after rung 2, abort that outer fold and do not access its outer-test labels.",
+    "level_2_validity": "A level-2 candidate must have valid complete inner OOF metrics for all three fixed seeds. If both candidates are invalid, abort the outer fold. If exactly one is valid, select it without changing the protocol.",
+    "numerical_or_model_failure": "A candidate with NaN/Inf loss or probability, a missing valid checkpoint, or incomplete inner OOF coverage is ineligible for that rung. It is not replaced by a new candidate or a new seed.",
+    "outer_seed_failure": "All three selected-candidate outer seed models are required. A non-infrastructure numerical failure aborts the outer fold; do not average two seeds and do not substitute another seed.",
+    "performance_triggered_retry": false
+  },
+  "fixed_model_constants": {
+    "align_dim": 160,
+    "anchor_projection_seed": 20250225,
+    "compact_fc_batch_size": 32,
+    "compact_fc_training_recipe": "Reuse the established FCCompactDeep recipe: BCEWithLogitsLoss, AdamW, batch size 32, cosine schedule, no frequency/demo inputs, two SE residual blocks.",
+    "gradient_clip": 1.0,
+    "hidden_dim": 80,
+    "learning_rate": 0.0008,
+    "multimodal_anchor_weight": 0.3,
+    "multimodal_batch_size": 16,
+    "multimodal_contrastive_temperature": 0.1,
+    "multimodal_focal_gamma": 1.0,
+    "multimodal_kl_weight": 0.002,
+    "multimodal_lr_warmup": 60,
+    "multimodal_mixup_alpha": 0.1,
+    "multimodal_noise_std": 0.01,
+    "multimodal_tau_high": 1.0,
+    "multimodal_tau_low": 0.15,
+    "multimodal_tau_warmup": 100,
+    "strict_ablation_training_recipe": "Reuse the established StrictAblationModel recipe: focal-weighted BCE, mixup after warmup, input noise, optional KL/anchor terms when OCREAD exists, and the predeclared legacy contrastive term when its weight is 0.10."
+  },
+  "level_1_seed42_screening": {
+    "actual_inner_training_seed_formula": "42 + outer_fold * 1000 + inner_fold * 100",
+    "base_seed": 42,
+    "irreversibility": "A candidate removed at rung 1 cannot re-enter. Only the rung-2 top two enter level 2.",
+    "rung_1": {
+      "budget_through_epoch": 80,
+      "candidates_entering": 12,
+      "early_stopping": false,
+      "ranking_data": "three-fold seed-42 inner OOF predictions from the best checkpoint observed through epoch 80",
+      "survivors": 6,
+      "train_from_epoch": 1
+    },
+    "rung_2": {
+      "budget_through_epoch": 160,
+      "candidates_entering": 6,
+      "early_stop_check": "At an evaluation epoch e, stop when e is at least 100 and e minus last_improved_epoch is at least 40.",
+      "early_stopping_patience_epochs": 40,
+      "minimum_epoch_before_early_stop": 100,
+      "ranking_data": "three-fold seed-42 inner OOF predictions from the best checkpoint observed through the stop epoch or epoch 160",
+      "resume_policy": "Resume the exact epoch-80 model, optimizer, scheduler, RNG, checkpoint-best state, and patience history; do not restart.",
+      "survivors": 2
+    },
+    "seed_policy": "The same base seed is paired across candidates. Do not add candidate-specific seed offsets.",
+    "selection_is_outer_fold_specific": true,
+    "successive_halving": true,
+    "training_schedule_planned_max_epoch": 160
+  },
+  "level_2_three_seed_selection": {
+    "actual_inner_training_seed_formula": "base_seed + outer_fold * 1000 + inner_fold * 100",
+    "base_seeds": [
+      42,
+      43,
+      44
+    ],
+    "candidate_auc_for_final_selection": "Arithmetic mean of the three seed-specific inner OOF AUC values.",
+    "candidate_brier_for_tie_break": "Arithmetic mean of the three seed-specific inner OOF Brier values.",
+    "candidates_entering_per_outer_fold": 2,
+    "early_stop_check": "At an evaluation epoch e, stop when e is at least 120 and e minus last_improved_epoch is at least 60.",
+    "early_stopping_patience_epochs": 60,
+    "evaluation_interval_epochs": 5,
+    "final_candidate_rule": "Apply the fixed 0.005 AUC-indifference, lower-mean-Brier, fewer-parameters, candidate_id ranking rule and select exactly one candidate.",
+    "maximum_epoch": 300,
+    "minimum_epoch_before_early_stop": 120,
+    "per_seed_metrics": "Compute one concatenated three-fold inner OOF AUC and Brier for each candidate and each seed.",
+    "restart_policy": "For all three seeds, including seed 42, start fresh from epoch 1 with the complete-training schedule; do not reuse level-1 weights or optimizer state.",
+    "seed_averaged_inner_probability_auc_used_for_selection": false,
+    "seed_selection": "Forbidden. No seed is discarded, preferred, weighted, or selected."
+  },
+  "metrics": {
+    "accuracy_or_target_threshold_used_for_selection": false,
+    "explicitly_forbidden_target": "Reaching 80% accuracy, AUC, or any other absolute performance level is never a goal, pruning condition, stopping condition, retry trigger, or protocol-change trigger.",
+    "inner_oof_definition": "For one candidate and one seed, concatenate the three inner-validation probability vectors in outer-training participant order; compute one AUC and one Brier score on that concatenated vector. Do not rank by mean inner-fold AUC.",
+    "performance_target_or_stop_condition": false,
+    "primary": "inner_oof_auc",
+    "probabilities": "Uncalibrated sigmoid probabilities from the fold-specific selected checkpoint.",
+    "secondary": "inner_oof_brier"
+  },
+  "ocread_inference_policy": {
+    "applies_to": [
+      "inner checkpoint evaluation",
+      "level-1 inner OOF prediction",
+      "level-2 inner OOF prediction",
+      "outer-final prediction"
+    ],
+    "decision": "use_deterministic_posterior_mean",
+    "mode": "mu",
+    "reason": "It would add inference randomness and another crossed factor without testing a distinct model representation; deterministic mu inference is already supported by the current model and preserves repeatable ranking.",
+    "stochastic_or_mc_inference_candidate": false,
+    "training_behavior": "Seeded variational sampling during training remains unchanged."
+  },
+  "outer_final_training_and_prediction": {
+    "actual_outer_training_seed_formula": "base_seed + outer_fold * 1000 + 777",
+    "allowed_ensemble": "Only the required equal-weight seed ensemble within the single selected candidate.",
+    "base_seeds": [
+      42,
+      43,
+      44
+    ],
+    "classification_threshold": 0.5,
+    "configuration_level_outer_oof_fusion": false,
+    "fixed_epoch_per_seed": "For the selected candidate and each base seed, take the median of that seed's three level-2 inner best epochs.",
+    "models": "Train three fresh models of the one selected candidate, one for each fixed base seed and that seed's fixed epoch.",
+    "outer_test_performance_for_selection_or_stopping": false,
+    "outer_test_prediction_calls": "Exactly one completed probability vector per seed; infrastructure retries must reproduce the same seed and configuration and may not inspect performance.",
+    "prediction": "Use deterministic OCREAD mu inference where applicable and take the unweighted arithmetic mean of the three seed probability vectors.",
+    "preprocessing": "Refit once on all outer-training participants for the selected candidate; deterministic preprocessing may be reused across its three seed fits.",
+    "selected_configurations_per_outer_fold": 1,
+    "threshold_selection": false
+  },
+  "protected_baseline": {
+    "access_policy_for_optimization": "read_prohibited_for_predictions_and_outer_test_results",
+    "new_output_root": "repository_root\\cpac_model_optimization_v1",
+    "path": "repository_root\\cpac_leakage_free_nested_cv\\final_seed42_20260717_124500",
+    "required_path_guard": [
+      "Resolve both the protected path and requested output path to absolute canonical paths.",
+      "Reject an output path equal to, inside, or an ancestor of the protected path.",
+      "Reject any input whose basename indicates frozen OOF predictions, outer-test probabilities, outer metrics, final metrics, or Stage-B results from the protected run."
+    ],
+    "write_policy": "never_write_never_overwrite_never_use_as_output_root"
+  },
+  "protocol_name": "cpac_model_optimization_v1",
+  "regularization_levels": {
+    "base": {
+      "dropout_cls": 0.25,
+      "dropout_sc_or_encoder": 0.25,
+      "weight_decay": 0.005
+    },
+    "strong": {
+      "dropout_cls": 0.35,
+      "dropout_sc_or_encoder": 0.35,
+      "weight_decay": 0.01
+    }
+  },
+  "scope": "ABIDE-I C-PAC model optimization using outer-fold-specific inner CV only",
+  "status": "CONFIRMED_FOR_SINGLE_FULL_RUN"
+}

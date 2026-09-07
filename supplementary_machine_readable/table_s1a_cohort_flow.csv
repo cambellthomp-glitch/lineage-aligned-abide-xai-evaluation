@@ -1,0 +1,8 @@
+flow_stage,n,interpretation
+phenotype_snapshot,1112,Unique phenotype records
+excluded_no_filename,77,Verifiable source label is FILE_ID=no_filename; age-range exclusion is not supported
+named_records,1035,1112 minus no_filename
+named_without_local_cc200,155,Individual reasons unavailable; not imaging-QC failures
+local_cc200_unique_matches,880,Local availability only; not imaging-QC passage
+excluded_structural_width_error,1,one retained local CC200 file row 130 has 44 rather than 200 columns
+canonical_analysis_cohort,879,Phenotype/time-series/features/splits/predictions aligned
