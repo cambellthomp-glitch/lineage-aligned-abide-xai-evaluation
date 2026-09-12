@@ -1,0 +1,303 @@
+{
+  "status": "COMPLETE_LOCKED_EXTERNAL_VALIDATION",
+  "generated_utc": "2026-07-13T10:43:28Z",
+  "development_cohort": "ABIDE-I",
+  "external_test_cohort": "ABIDE-II",
+  "selected_candidate": "base",
+  "fixed_epoch": 135,
+  "fixed_threshold": 0.5,
+  "selection_integrity": {
+    "feature_selection": "ABIDE I only",
+    "scaling_imputation": "ABIDE I only",
+    "anchor_construction": "ABIDE I only",
+    "candidate_and_epoch": "ABIDE I inner CV only",
+    "decision_threshold": "fixed a priori at 0.5",
+    "predictions_locked_before_external_label_load": true,
+    "abide_ii_used_for_selection": false
+  },
+  "evaluations": {
+    "full_abide_ii": {
+      "metrics": {
+        "n": 883,
+        "asd": 408,
+        "td": 475,
+        "auc": 0.6392260061919504,
+        "accuracy": 0.5979614949037373,
+        "balanced_accuracy": 0.5929540763673891,
+        "sensitivity": 0.5269607843137255,
+        "specificity": 0.6589473684210526,
+        "precision": 0.5702917771883289,
+        "f1": 0.5477707006369427,
+        "brier": 0.25267589326422046,
+        "threshold": 0.5
+      },
+      "participant_bootstrap": {
+        "method": "stratified participant bootstrap",
+        "iterations": 2000,
+        "ci95": {
+          "auc": [
+            0.6037398090815274,
+            0.6770046439628483
+          ],
+          "accuracy": [
+            0.5662514156285391,
+            0.6308040770101925
+          ],
+          "balanced_accuracy": [
+            0.5608716460268318,
+            0.626438015995872
+          ],
+          "sensitivity": [
+            0.47549019607843135,
+            0.5735294117647058
+          ],
+          "specificity": [
+            0.6168421052631579,
+            0.7010526315789474
+          ],
+          "precision": [
+            0.5327831400077045,
+            0.6103542234332425
+          ],
+          "f1": [
+            0.5065608231738656,
+            0.5864703528623538
+          ],
+          "brier": [
+            0.23627057916098654,
+            0.26798454508710323
+          ]
+        }
+      },
+      "site_cluster_bootstrap": {
+        "method": "site-cluster bootstrap",
+        "requested_iterations": 2000,
+        "valid_iterations": 2000,
+        "sites": 15,
+        "ci95": {
+          "auc": [
+            0.6006830748379887,
+            0.6746418467878245
+          ],
+          "accuracy": [
+            0.5473629385964912,
+            0.6311561052013314
+          ],
+          "balanced_accuracy": [
+            0.5545988401558918,
+            0.6244634688732454
+          ],
+          "sensitivity": [
+            0.45208602681001636,
+            0.6016053799142034
+          ],
+          "specificity": [
+            0.610210373798185,
+            0.7062830343184694
+          ],
+          "precision": [
+            0.4739210568491426,
+            0.6931043819245613
+          ],
+          "f1": [
+            0.4900651238601489,
+            0.6042662266852804
+          ],
+          "brier": [
+            0.23385742677395552,
+            0.27696032547694743
+          ]
+        }
+      }
+    },
+    "analysis_cohort_site_disjoint": {
+      "metrics": {
+        "n": 343,
+        "asd": 159,
+        "td": 184,
+        "auc": 0.6452693464588461,
+        "accuracy": 0.6034985422740525,
+        "balanced_accuracy": 0.6022354388843314,
+        "sensitivity": 0.5849056603773585,
+        "specificity": 0.6195652173913043,
+        "precision": 0.5705521472392638,
+        "f1": 0.577639751552795,
+        "brier": 0.2510408553408639,
+        "threshold": 0.5
+      },
+      "participant_bootstrap": {
+        "method": "stratified participant bootstrap",
+        "iterations": 2000,
+        "ci95": {
+          "auc": [
+            0.5866138569866011,
+            0.7034129751162155
+          ],
+          "accuracy": [
+            0.5510204081632653,
+            0.6531341107871715
+          ],
+          "balanced_accuracy": [
+            0.549316379546076,
+            0.65398935261143
+          ],
+          "sensitivity": [
+            0.5031446540880503,
+            0.660377358490566
+          ],
+          "specificity": [
+            0.5489130434782609,
+            0.6902173913043478
+          ],
+          "precision": [
+            0.5161247426218256,
+            0.6273322372427231
+          ],
+          "f1": [
+            0.5142857142857142,
+            0.6344410876132931
+          ],
+          "brier": [
+            0.22717839415099653,
+            0.2763738117584024
+          ]
+        }
+      },
+      "site_cluster_bootstrap": {
+        "method": "site-cluster bootstrap",
+        "requested_iterations": 2000,
+        "valid_iterations": 2000,
+        "sites": 7,
+        "ci95": {
+          "auc": [
+            0.5929517585467833,
+            0.6974453678054786
+          ],
+          "accuracy": [
+            0.5699658703071673,
+            0.6387096774193548
+          ],
+          "balanced_accuracy": [
+            0.5680979260098477,
+            0.6384441229703071
+          ],
+          "sensitivity": [
+            0.47220911949685535,
+            0.6764705882352942
+          ],
+          "specificity": [
+            0.5619834710743802,
+            0.6964285714285714
+          ],
+          "precision": [
+            0.5277777777777778,
+            0.6265368041509101
+          ],
+          "f1": [
+            0.5132743362831859,
+            0.6354515050167224
+          ],
+          "brier": [
+            0.227852843457933,
+            0.2753068025102899
+          ]
+        }
+      }
+    },
+    "release_level_site_disjoint": {
+      "metrics": {
+        "n": 257,
+        "asd": 125,
+        "td": 132,
+        "auc": 0.6291515151515152,
+        "accuracy": 0.5953307392996109,
+        "balanced_accuracy": 0.5941818181818181,
+        "sensitivity": 0.552,
+        "specificity": 0.6363636363636364,
+        "precision": 0.5897435897435898,
+        "f1": 0.5702479338842975,
+        "brier": 0.25796377199970755,
+        "threshold": 0.5
+      },
+      "participant_bootstrap": {
+        "method": "stratified participant bootstrap",
+        "iterations": 2000,
+        "ci95": {
+          "auc": [
+            0.5598151515151515,
+            0.6992257575757574
+          ],
+          "accuracy": [
+            0.5369649805447471,
+            0.6575875486381323
+          ],
+          "balanced_accuracy": [
+            0.5356613636363637,
+            0.6545969696969696
+          ],
+          "sensitivity": [
+            0.464,
+            0.632
+          ],
+          "specificity": [
+            0.553030303030303,
+            0.7196969696969697
+          ],
+          "precision": [
+            0.5245901639344263,
+            0.6603816859961917
+          ],
+          "f1": [
+            0.4958623787279914,
+            0.6386641793646919
+          ],
+          "brier": [
+            0.2288162677785518,
+            0.2880918278844754
+          ]
+        }
+      },
+      "site_cluster_bootstrap": {
+        "method": "site-cluster bootstrap",
+        "requested_iterations": 2000,
+        "valid_iterations": 2000,
+        "sites": 6,
+        "ci95": {
+          "auc": [
+            0.5808618095852138,
+            0.6905930216456668
+          ],
+          "accuracy": [
+            0.5620437956204379,
+            0.6481481481481481
+          ],
+          "balanced_accuracy": [
+            0.5606460118655241,
+            0.6463320463320463
+          ],
+          "sensitivity": [
+            0.4322033898305085,
+            0.68
+          ],
+          "specificity": [
+            0.5544554455445545,
+            0.7286821705426356
+          ],
+          "precision": [
+            0.5340909090909091,
+            0.6428571428571429
+          ],
+          "f1": [
+            0.48214285714285715,
+            0.6490566037735849
+          ],
+          "brier": [
+            0.2264594048758045,
+            0.282457908177333
+          ]
+        }
+      }
+    }
+  },
+  "claim_boundary": "Independent-cohort technical validation of predictive transportability under harmonized fMRIPrep/postprocessing; not external replication of attribution agreement, sanity, or ROAR."
+}

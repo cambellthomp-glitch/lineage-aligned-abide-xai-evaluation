@@ -6,5 +6,6 @@
 - `tests/`: lightweight release-candidate tests only.
 - `aggregate_source_data/`: safe, non-identifying aggregate and condition-level data.
 - `supplementary_machine_readable/`: non-identifying aggregate tables and path-sanitized artifact/checkpoint provenance ledgers; no checkpoint bytes.
+- `external_validation/`: ABIDE-I to ABIDE-II pipeline code, frozen configurations, public prediction-lock metadata, aggregate external-validation results, and explicit provenance limitations.
 - `environment/`: known-runtime boundaries.
 - root documents: authorship, citation, contribution, privacy, third-party data, reproducibility, change record, license texts, and explicit license-scope records.

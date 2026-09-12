@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE_STRICT_NESTED_CV",
+  "cohort": "ABIDE-I",
+  "n": 1024,
+  "asd": 482,
+  "typically_developing": 542,
+  "outer_folds": 10,
+  "inner_folds": 3,
+  "outer_oof_auc": 0.6530638024222566,
+  "outer_oof_accuracy_threshold_0_5": 0.6142578125,
+  "selection_scope": "ABIDE-I only"
+}

@@ -3,10 +3,10 @@ message: "If you use this package, cite this exact software release and the asso
 title: "Attribution agreement without evidence of retraining-based faithfulness: a lineage-aligned evaluation of feature attribution in ABIDE-I resting-state fMRI classification"
 type: software
 license: MIT
-version: 1.0.0
-date-released: "2026-09-07"
+version: 1.1.0
+date-released: "2026-09-12"
 repository-code: "https://github.com/cambellthomp-glitch/lineage-aligned-abide-xai-evaluation"
-url: "https://github.com/cambellthomp-glitch/lineage-aligned-abide-xai-evaluation/releases/tag/v1.0.0"
+url: "https://github.com/cambellthomp-glitch/lineage-aligned-abide-xai-evaluation/releases/tag/v1.1.0"
 authors:
   - family-names: Yu
     given-names: Biantian
@@ -15,6 +15,8 @@ authors:
     email: "yubiantian@stu.cqnu.edu.cn"
 keywords:
   - ABIDE-I
+  - ABIDE-II
+  - external validation
   - resting-state fMRI
   - feature attribution
   - explainable artificial intelligence

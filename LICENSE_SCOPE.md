@@ -1,12 +1,13 @@
 # License Scope
 
-This file defines the mixed-license boundary for this local GitHub release candidate. It grants no permission to upload the candidate; external upload remains unauthorized.
+This file defines the mixed-license boundary for GitHub release 1.1.0.
 
 ## MIT License (SPDX: MIT)
 
 Copyright (c) 2026 Biantian Yu. The MIT License in `LICENSE` applies to the author-owned software and its necessary code documentation:
 
 - `src/**/*.py`;
+- `external_validation/code/**/*.py`;
 - `scripts/**/*.py`;
 - `tests/**/*.py`;
 - code configuration templates in `configs/**` and `src/cpac_model_optimization_v1/**`;
@@ -21,13 +22,14 @@ The official notice in `LICENSES/CC-BY-4.0.txt` applies only to:
 
 - author-generated, non-identifying files in `aggregate_source_data/**`;
 - author-generated, non-identifying tables and path-sanitized ledgers in `supplementary_machine_readable/**`;
+- author-generated, non-identifying aggregate and public lock/provenance records in `external_validation/results/**`;
 - `DATA_DICTIONARY.md`, which documents those data and ledgers.
 
 The directory-level license notices repeat this boundary. CC BY 4.0 does not apply to code.
 
 ## Third-party material — no relicensing and no redistribution
 
-ABIDE-I and Preprocessed Connectomes Project raw data, phenotypic data, participant-level preprocessed derivatives, and provider materials are not covered by MIT or CC BY 4.0. They are not included. Readers must obtain them from the official providers under provider terms.
+ABIDE-I/II, Preprocessed Connectomes Project, and fMRIPrep raw data, phenotypic data, participant-level derivatives, and provider materials are not covered by MIT or CC BY 4.0. They are not included. Readers must obtain them from the official providers under provider terms.
 
 ## Explicit exclusions
 

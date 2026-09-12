@@ -1,0 +1,31 @@
+{
+  "scientific_artifact_checks": {
+    "strict_nested_cv": {
+      "pass": true
+    },
+    "prediction_lock": {
+      "pass": true
+    },
+    "locked_vs_labeled_predictions": {
+      "pass": true
+    },
+    "site_disjoint_masks": {
+      "pass": true
+    },
+    "external_validation": {
+      "pass": true
+    },
+    "launcher": {
+      "pass": true
+    }
+  },
+  "all_scientific_artifact_checks_pass": true,
+  "source_snapshot_check": {
+    "adapter_exact_match": true,
+    "site_config_exact_match": true,
+    "strict_base_module_exact_match": false,
+    "strict_base_module_recorded_sha256": "ccd4d663c5fa04a3f2f519103616566a8ec7f259652d639dad037a8fc4a23713",
+    "strict_base_module_current_release_sha256": "3e3eaaf6174ff7f8c3ed752559f5d760d2423774b93b7ee04161c551fa1fdc59",
+    "interpretation": "The adapter and site configuration match the locked run. The strict base source file was modified after the run and the exact source snapshot has not been recovered. This provenance limitation does not alter the frozen aggregate results or prediction-lock checks, but it prevents a claim of exact source-level rerun reproducibility from this public package alone."
+  }
+}

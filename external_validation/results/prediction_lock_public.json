@@ -1,0 +1,10 @@
+{
+  "status": "PREDICTIONS_LOCKED_BEFORE_LABEL_LOAD",
+  "created_utc": "2026-07-13T10:42:14Z",
+  "prediction_file": "not redistributed; participant-level artifact",
+  "prediction_file_sha256": "7e3149302203f2648bba1cb66d79db082881f10bf9274ffbf3f4e82c1d9c4a8e",
+  "external_labels_loaded": false,
+  "selected_candidate": "base",
+  "fixed_epoch": 135,
+  "note": "The hash commits to the blinded participant-level prediction artifact created before labels were loaded. The artifact itself is excluded from the public release."
+}

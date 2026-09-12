@@ -1,0 +1,44 @@
+project_name: abide_fmriprep25_abide1_to_abide2
+analysis_version: 1.0.0
+random_seed: 20260710
+
+cohorts:
+  development: ABIDE_I
+  external_test: ABIDE_II
+
+fmriprep:
+  version: 25.2.4
+  space: MNI152NLin2009cAsym
+  resolution_mm: 2
+
+postprocessing:
+  global_signal_regression: false
+  motion_terms: 24
+  acompcor_components: 5
+  detrend: true
+  low_pass_hz: 0.10
+  high_pass_hz: 0.01
+  fd_threshold_mm: 0.50
+  min_retained_volumes: 100
+  smoothing_fwhm_mm: null
+
+parcellation:
+  name: Craddock_CC200
+  expected_rois: 200
+  atlas_path: ../downloads/craddock_2012/cc200_roi_atlas.nii.gz
+  required_space: MNI152NLin2009cAsym
+
+features:
+  connectivity: fisher_z_pearson_lower_triangle
+  expected_fc_edges: 19900
+  spectral: welch_psd_interpolated_physical_frequency
+  spectral_frequency_hz: [0.01, 0.0164285714, 0.0228571429, 0.0292857143, 0.0357142857, 0.0421428571, 0.0485714286, 0.055, 0.0614285714, 0.0678571429, 0.0742857143, 0.0807142857, 0.0871428571, 0.0935714286, 0.10]
+  demographics: [age, sex]
+
+model_selection:
+  outer_folds: 10
+  inner_folds: 5
+  fc_top_k: 2985
+  logistic_c_grid: [0.01, 0.1, 1.0]
+  threshold_objective: balanced_accuracy
+  external_test_used_for_selection: false
